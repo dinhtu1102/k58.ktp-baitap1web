@@ -1,0 +1,10 @@
+E:\visual studio community\Web app\obj\Debug\Web app.csproj.AssemblyReference.cache
+E:\visual studio community\Web app\obj\Debug\Web app.csproj.CoreCompileInputs.cache
+E:\visual studio community\Web app\bin\Web app.dll.config
+E:\visual studio community\Web app\bin\Web app.dll
+E:\visual studio community\Web app\bin\Web app.pdb
+E:\visual studio community\Web app\bin\TuPuzzleLib.dll
+E:\visual studio community\Web app\bin\TuPuzzleLib.pdb
+E:\visual studio community\Web app\obj\Debug\Web app.csproj.Up2Date
+E:\visual studio community\Web app\obj\Debug\Web app.dll
+E:\visual studio community\Web app\obj\Debug\Web app.pdb

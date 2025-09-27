@@ -1,0 +1,6 @@
+E:\visual studio community\TuPuzzleLib\TuPuzzleLib\obj\Debug\TuPuzzleLib.csproj.AssemblyReference.cache
+E:\visual studio community\TuPuzzleLib\TuPuzzleLib\obj\Debug\TuPuzzleLib.csproj.CoreCompileInputs.cache
+E:\visual studio community\TuPuzzleLib\TuPuzzleLib\bin\Debug\TuPuzzleLib.dll
+E:\visual studio community\TuPuzzleLib\TuPuzzleLib\bin\Debug\TuPuzzleLib.pdb
+E:\visual studio community\TuPuzzleLib\TuPuzzleLib\obj\Debug\TuPuzzleLib.dll
+E:\visual studio community\TuPuzzleLib\TuPuzzleLib\obj\Debug\TuPuzzleLib.pdb

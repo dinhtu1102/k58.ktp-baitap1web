@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Puzzle Doraemon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f7;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+        }
+
+        .board {
+            display: grid;
+            margin: 0 auto;
+            width: max-content;
+            background: #333;
+            padding: 4px;
+            gap: 2px; /* đường kẻ mảnh */
+        }
+
+        .tile {
+            cursor: pointer;
+            border-radius: 3px;
+            background-size: cover;
+        }
+
+        .empty {
+            background: #333;
+            cursor: default;
+        }
+
+        button {
+            margin: 12px 6px;
+            padding: 6px 12px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Game Xếp Hình Doraemon</h2>
+    <div class="board" id="board"></div>
+    <div>
+        <button id="shuffleBtn">Shuffle</button>
+        <button id="solveBtn">Solve</button>
+    </div>
+
+    <script>
+        const board = document.getElementById("board");
+        const imgUrl = "hinh-nen-doraemon-cute-26.jpg"; // ảnh Doraemon (đặt cùng thư mục)
+
+        let SIZE = 4;      // bắt đầu 4x4
+        let tiles = [];
+        let emptyIndex = null;
+
+        function initSolved() {
+            tiles = [];
+            for (let i = 0; i < SIZE * SIZE - 1; i++) tiles.push(i);
+            tiles.push(null); // ô trống
+            emptyIndex = SIZE * SIZE - 1;
+        }
+
+        function render() {
+            board.innerHTML = "";
+            board.style.gridTemplateColumns = `repeat(${SIZE}, 80px)`;
+            board.style.gridTemplateRows = `repeat(${SIZE}, 80px)`;
+
+            for (let i = 0; i < tiles.length; i++) {
+                const div = document.createElement("div");
+                const n = tiles[i];
+                div.className = "tile" + (n === null ? " empty" : "");
+                div.style.width = div.style.height = "80px";
+
+                if (n !== null) {
+                    const row = Math.floor(n / SIZE);
+                    const col = n % SIZE;
+                    div.style.backgroundImage = `url(${imgUrl})`;
+                    div.style.backgroundSize = `${SIZE * 80}px ${SIZE * 80}px`;
+                    div.style.backgroundPosition = `-${col * 80}px -${row * 80}px`;
+                }
+
+                div.onclick = () => move(i);
+                board.appendChild(div);
+            }
+        }
+
+        function indexToRC(i) { return { r: Math.floor(i / SIZE), c: i % SIZE }; }
+        function areAdjacent(i, j) {
+            const a = indexToRC(i), b = indexToRC(j);
+            return Math.abs(a.r - b.r) + Math.abs(a.c - b.c) === 1;
+        }
+
+        function move(i) {
+            if (areAdjacent(i, emptyIndex)) {
+                tiles[emptyIndex] = tiles[i];
+                tiles[i] = null;
+                emptyIndex = i;
+                render();
+                if (checkWin()) {
+                    setTimeout(() => {
+                        alert(`🎉 Hoàn thành level ${SIZE - 3}! Chuẩn bị qua level tiếp theo...`);
+                        nextLevel();
+                    }, 200);
+                }
+            }
+        }
+
+        function checkWin() {
+            for (let i = 0; i < tiles.length - 1; i++) {
+                if (tiles[i] !== i) return false;
+            }
+            return true;
+        }
+
+        function shuffle(steps = 200) {
+            let e = emptyIndex;
+            for (let s = 0; s < steps; s++) {
+                const rc = indexToRC(e);
+                const neighbors = [];
+                if (rc.r > 0) neighbors.push(e - SIZE);
+                if (rc.r < SIZE - 1) neighbors.push(e + SIZE);
+                if (rc.c > 0) neighbors.push(e - 1);
+                if (rc.c < SIZE - 1) neighbors.push(e + 1);
+                const pick = neighbors[Math.floor(Math.random() * neighbors.length)];
+                tiles[e] = tiles[pick];
+                tiles[pick] = null;
+                e = pick;
+            }
+            emptyIndex = e;
+            render();
+        }
+
+        function nextLevel() {
+            SIZE++;  // tăng độ khó
+            initSolved();
+            render();
+            shuffle(300); // xáo nhiều hơn
+        }
+
+        document.getElementById("shuffleBtn").onclick = () => shuffle(200);
+        document.getElementById("solveBtn").onclick = () => { initSolved(); render(); };
+
+        initSolved();
+        render();
+    </script>
+</body>
+</html>

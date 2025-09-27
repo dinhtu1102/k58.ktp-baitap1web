@@ -1,0 +1,11 @@
+E:\visual studio community\Forms\obj\Debug\Forms.csproj.AssemblyReference.cache
+E:\visual studio community\Forms\obj\Debug\Forms.Properties.Resources.resources
+E:\visual studio community\Forms\obj\Debug\Forms.csproj.GenerateResource.cache
+E:\visual studio community\Forms\obj\Debug\Forms.csproj.CoreCompileInputs.cache
+E:\visual studio community\Forms\bin\Debug\Forms.exe
+E:\visual studio community\Forms\bin\Debug\Forms.pdb
+E:\visual studio community\Forms\bin\Debug\TuPuzzleLib.dll
+E:\visual studio community\Forms\bin\Debug\TuPuzzleLib.pdb
+E:\visual studio community\Forms\obj\Debug\Forms.csproj.Up2Date
+E:\visual studio community\Forms\obj\Debug\Forms.exe
+E:\visual studio community\Forms\obj\Debug\Forms.pdb

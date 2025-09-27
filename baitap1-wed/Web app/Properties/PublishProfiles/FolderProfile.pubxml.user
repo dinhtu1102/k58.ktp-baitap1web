@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- https://go.microsoft.com/fwlink/?LinkID=208121. -->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>E:\gamehay</_PublishTargetUrl>
+    <History>True|2025-09-26T17:24:33.1213453Z||;True|2025-09-27T00:23:43.9786399+07:00||;True|2025-09-27T00:22:38.2232009+07:00||;False|2025-09-27T00:22:34.9810995+07:00||;True|2025-09-27T00:15:26.3702241+07:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="api.aspx">
+      <publishTime>09/26/2025 22:04:16</publishTime>
+    </File>
+    <File Include="bin/TuPuzzleLib.dll">
+      <publishTime>09/26/2025 21:27:43</publishTime>
+    </File>
+    <File Include="bin/TuPuzzleLib.pdb">
+      <publishTime>09/26/2025 21:27:43</publishTime>
+    </File>
+    <File Include="bin/Web app.dll">
+      <publishTime>09/27/2025 00:24:32</publishTime>
+    </File>
+    <File Include="bin/Web app.pdb">
+      <publishTime>09/27/2025 00:24:32</publishTime>
+    </File>
+    <File Include="index.html">
+      <publishTime>09/26/2025 23:56:32</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>09/27/2025 00:15:26</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

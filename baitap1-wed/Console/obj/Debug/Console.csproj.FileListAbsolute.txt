@@ -1,0 +1,9 @@
+E:\visual studio community\Console\bin\Debug\Console.exe
+E:\visual studio community\Console\bin\Debug\Console.pdb
+E:\visual studio community\Console\bin\Debug\TuPuzzleLib.dll
+E:\visual studio community\Console\bin\Debug\TuPuzzleLib.pdb
+E:\visual studio community\Console\obj\Debug\Console.csproj.AssemblyReference.cache
+E:\visual studio community\Console\obj\Debug\Console.csproj.CoreCompileInputs.cache
+E:\visual studio community\Console\obj\Debug\Console.csproj.Up2Date
+E:\visual studio community\Console\obj\Debug\Console.exe
+E:\visual studio community\Console\obj\Debug\Console.pdb
